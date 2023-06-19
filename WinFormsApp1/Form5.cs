@@ -1,4 +1,4 @@
-﻿using Npgsql;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +18,7 @@ namespace WinFormsApp1
         {
             InitializeComponent();
         }
-        NpgsqlConnection baglanti = new NpgsqlConnection("server=localhost;port=5432; Database=urunler; user ID=postgres; password=123");
+        NpgsqlConnection baglanti = new NpgsqlConnection("server=ep-calm-dust-854360-pooler.us-east-1.postgres.vercel-storage.com;port=5432; Database=verceldb; user ID=default; password=MK1lamIUr6fb");
         private void button1_Click(object sender, EventArgs e)
         {
             Form1 form1sec = new Form1();
@@ -76,7 +76,7 @@ namespace WinFormsApp1
             // Veritabanından silme sorgusu
             string deleteQuery = "DELETE FROM satislar WHERE id = @id";
 
-            using (NpgsqlConnection connection = new NpgsqlConnection("server=localhost;port=5432; Database=urunler; user ID=postgres; password=123"))
+            using (NpgsqlConnection connection = new NpgsqlConnection("server=ep-calm-dust-854360-pooler.us-east-1.postgres.vercel-storage.com;port=5432; Database=verceldb; user ID=default; password=MK1lamIUr6fb"))
             {
                 using (NpgsqlCommand command = new NpgsqlCommand(deleteQuery, connection))
                 {
@@ -116,7 +116,7 @@ namespace WinFormsApp1
             int satisAdetAylik = Convert.ToInt32(textBox4.Text);
             int satisAdetYillik = Convert.ToInt32(textBox5.Text);
 
-            using (NpgsqlConnection connection = new NpgsqlConnection("server=localhost;port=5432; Database=urunler; user ID=postgres; password=123"))
+            using (NpgsqlConnection connection = new NpgsqlConnection("server=ep-calm-dust-854360-pooler.us-east-1.postgres.vercel-storage.com;port=5432; Database=verceldb; user ID=default; password=MK1lamIUr6fb"))
             {
                 connection.Open();
 
@@ -159,7 +159,7 @@ namespace WinFormsApp1
                 int satisAdetAylik = Convert.ToInt32(textBox4.Text);
                 int satisAdetYillik = Convert.ToInt32(textBox5.Text);
 
-                using (NpgsqlConnection connection = new NpgsqlConnection("server=localhost;port=5432; Database=urunler; user ID=postgres; password=123"))
+                using (NpgsqlConnection connection = new NpgsqlConnection("server=ep-calm-dust-854360-pooler.us-east-1.postgres.vercel-storage.com;port=5432; Database=verceldb; user ID=default; password=MK1lamIUr6fb"))
                 {
                     connection.Open();
 
@@ -194,6 +194,7 @@ namespace WinFormsApp1
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+        
 
         }
     }
